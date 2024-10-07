@@ -1,13 +1,16 @@
 html {
     margin: 0;
     padding: 0;
+    background: black;
 }
 h1 {
     text-align: center;
     font-size: 3rem;
+    color: white;
 }
 p {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 10rem;
+    color: yellow;
 }
