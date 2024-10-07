@@ -18,14 +18,10 @@ function checkForDay(inputDay) {
     }
 
     if (inputDay === day) {
-        document.getElementById('value').innerHTML = "Yes"
+        document.getElementById('value').innerHTML = "Ja!"
         document.getElementById('value').style.color = "green";
     } else {
-        document.getElementById('value').innerHTML = "No"
+        document.getElementById('value').innerHTML = "Nei\n:("
         document.getElementById('value').style.color = "red";
     }
-
-    console.log("Today it is " + day);
-    console.log("Today it is " + dayOfWeek);
-
 }
