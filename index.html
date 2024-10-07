@@ -14,9 +14,9 @@
         <h2 id="value"><noscript>Error: JavaScript not Found</noscript></h2>
 
         <center>
-            <button onclick="document.getElementsByClassName('dagReveal').style.display = 'block';">Hvilken dag er det i dag?</button>
+            <button onclick="document.getElementById('dagReveal').style.display = 'block';">Hvilken dag er det i dag?</button>
         </center>
-        <p class="dagReveal">I dag er det <span id="dag" class="dagReveal">x.dag</span></p>
+        <p id="dagReveal">I dag er det <span id="dag">x.dag</span></p>
 
         <script src="script.js"></script>
     </body>

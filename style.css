@@ -19,3 +19,6 @@ p {
     font-size: 2rem;
     color: green;
 }
+#dagReveal {
+    display: none;
+}

@@ -2,19 +2,19 @@ function checkForDay(inputDay) {
     dayOfWeek = new Date().getDay();
     
     if (dayOfWeek == 0) {
-        day = "sunday"
+        day = "søndag"
     } else if (dayOfWeek == 1) {
-        day = "monday"
+        day = "mandag"
     } else if (dayOfWeek == 2) {
-        day = "tuesday"
+        day = "tirsdag"
     } else if (dayOfWeek == 3) {
-        day = "wednesday"
+        day = "onsdag"
     } else if (dayOfWeek == 4) {
-        day = "thursday"
+        day = "torsdag"
     } else if (dayOfWeek == 5) {
-        day = "friday"
+        day = "fredag"
     } else if (dayOfWeek == 6) {
-        day = "saturday"
+        day = "lørdag"
     }
 
     if (inputDay === day) {
@@ -24,4 +24,6 @@ function checkForDay(inputDay) {
         document.getElementById('value').innerHTML = "Nei\n:("
         document.getElementById('value').style.color = "red";
     }
+
+    document.getElementById('dag').innerHTML = day;
 }
