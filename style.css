@@ -14,11 +14,23 @@ h2 {
     font-size: 10rem;
     color: yellow;
 }
+h3 {
+    color: white;
+}
 p {
     text-align: center;
     font-size: 2rem;
     color: green;
 }
 #dagReveal {
+    display: none;
+}
+.sprsml {
+    display: none;
+}
+#fridayCheck {
+    display: none;
+}
+#countdown {
     display: none;
 }

@@ -27,3 +27,23 @@ function checkForDay(inputDay) {
 
     document.getElementById('dag').innerHTML = day;
 }
+
+function countdown(seconds) {
+    document.getElementById('countdownBtn').style.display = 'none';
+    document.getElementById('countdown').style.display = 'block';
+
+    seconds += 1;
+
+    const yourmom = setInterval(countdownProcess, 1000);
+    function countdownProcess() {
+        seconds -= 1;
+        document.getElementById('countdown').innerHTML = seconds;
+
+        if (seconds <= 0) {
+            clearInterval(yourmom);
+            document.getElementById('countdown').style.display = 'none';
+            document.getElementById('fridayCheck').style.display = 'block';
+        }
+    }
+
+}
