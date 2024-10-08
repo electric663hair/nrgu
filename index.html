@@ -10,49 +10,21 @@
 
     </head>
     <body onload="checkForDay('friday')">
+
+        <h1>Er det Fredag?</h1>
         
         <div id="0">
-            <h3>Vil du vite hvilken dag det er i dag?</h2>
-            <button onclick="document.getElementById('1').style.display = 'block'">Ja!</button>
-            <button onclick="document.getElementsByName('body').style.display = 'none'">Nei!</button>
+            <h3 id="no-text">Vil du virkelig vite om det er fredag i dag?!</h2>
+            <button id="countdownBtn" onclick="countdown(3)" onclick="document.getElementById('1').style.display = 'block'">Ja!</button>
+            <p id="countdown"></p>
+            <button id="no-button" onclick="document.getElementsByName('body').style.display = 'none'">Nei!</button>
         </div>
 
-        <div id="1" class="sprsml">
-            <h3>Sikker på at du vil vite hvilken dag det er i dag?</h2>
-            <button onclick="document.getElementById('2').style.display = 'block'">Ja!</button>
-            <button onclick="document.getElementsByName('body').style.display = 'none'">Nei!</button>
-        </div>
-
-        <div id="2" class="sprsml">
-            <h3>Helt sikker på at du vil vite hvilken dag det er i dag?</h2>
-            <button onclick="document.getElementById('3').style.display = 'block'">Ja!</button>
-            <button onclick="document.getElementsByName('body').style.display = 'none'">Nei!</button>
-        </div>
-        
-        <div id="3" class="sprsml">
-            <h3>Er du helt helt sikker på at du vil vite hvilken dag det er i dag?</h2>
-            <button onclick="document.getElementById('4').style.display = 'block'">Ja!</button>
-            <button onclick="document.getElementsByName('body').style.display = 'none'">Nei!</button>
-        </div>
-
-        <div id="4" class="sprsml">
-            <h3>Ok, så du vil vite hvilken dag det er i dag?</h2>
-            <button onclick="document.getElementById('fridayCheck').style.display = 'block'">Ja!</button>
-            <button onclick="document.getElementsByName('body').style.display = 'none'">Nei!</button>
-        </div>
 
         <div id="fridayCheck">
-            <h1>Er det Fredag?</h1>
             <h2 id="value"><noscript>Error: JavaScript not Found</noscript></h2>
         </div>
 
-        <button id="countdownBtn" onclick="countdown(3)">Start countdown</button>
-        <p id="countdown"></p>
-
-        <!-- <center>
-            <button onclick="document.getElementById('dagReveal').style.display = 'block';">Hvilken dag er det i dag?</button>
-        </center> -->
-        <p id="dagReveal">I dag er det <span id="dag">x.dag</span></p>
 
         <script src="script.js"></script>
     </body>

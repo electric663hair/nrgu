@@ -30,7 +30,10 @@ function checkForDay(inputDay) {
 
 function countdown(seconds) {
     document.getElementById('countdownBtn').style.display = 'none';
+    document.getElementById('no-button').style.display = 'none';
+    document.getElementById('no-text').style.display = 'none';
     document.getElementById('countdown').style.display = 'block';
+
 
     seconds += 1;
 
