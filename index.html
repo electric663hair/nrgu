@@ -15,11 +15,13 @@
         
         <div id="0">
             <h3 id="no-text">Vil du virkelig vite om det er fredag i dag?!</h2>
-            <button id="countdownBtn" onclick="countdown(3)" onclick="document.getElementById('1').style.display = 'block'">Ja!</button>
             <p id="countdown"></p>
-<!--             <button id="no-button" onclick="closeWindow()">Nei!</button> -->
-            <div style="display: inline; background: white;">
-                <a id="no-button" href="" style="text-decoration: none; color: black;">Nei!</a>
+            <div style="display: flex; justify-content: center;">
+                <button id="countdownBtn" onclick="countdown(3)" onclick="document.getElementById('1').style.display = 'block'">Ja!</button>
+    <!--             <button id="no-button" onclick="closeWindow()">Nei!</button> -->
+                <div style="display: inline; background: #e5e5e5; border: grey 1px solid; border-radius: 10%; padding: 1px;">
+                    <a id="no-button" href="about:blank" style="text-decoration: none; color: black;">Nei!</a>
+                </div>
             </div>
         </div>
 
