@@ -55,3 +55,16 @@ function countdown(seconds) {
     }
 
 }
+function mattekalkulatorskatteikkemattekalkulator() {
+    var konto = prompt("Hvor fattig er du?");
+    const nettoLønnIMnd = prompt("Hvor mye legger du inn på kontoen din i måneden?");    
+    const rente = prompt("Hvor mange prosent er renten?");
+
+
+    console.log(`Før noe skjer:\n${konto}\n${nettoLønnIMnd}`)
+    for (var i = 1; i <= 12; i++) {
+        konto += konto * rente/100;
+        konto += nettoLønnIMnd;
+        console.log("\n=====" + i + "=====\n" + konto + " : " + nettoLønnIMnd)
+    }
+}
