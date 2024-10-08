@@ -28,6 +28,11 @@ function checkForDay(inputDay) {
     document.getElementById('dag').innerHTML = day;
 }
 
+function closeWindow() {
+  window.top.opener = null;
+  window.close();
+}
+
 function countdown(seconds) {
     document.getElementById('countdownBtn').style.display = 'none';
     document.getElementById('no-button').style.display = 'none';
