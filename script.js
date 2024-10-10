@@ -18,11 +18,9 @@ function checkForDay(inputDay) {
     }
 
     if (inputDay === day) {
-        document.getElementById('value').innerHTML = "Ja!"
-        document.getElementById('value').style.color = "green";
+        document.getElementById('ja').style.display = "block";
     } else {
-        document.getElementById('value').innerHTML = "Nei\n:("
-        document.getElementById('value').style.color = "red";
+        document.getElementById('nei').style.display = "block";
     }
 
     document.getElementById('dag').innerHTML = day;
@@ -50,7 +48,7 @@ function countdown(seconds) {
         if (seconds <= 0) {
             clearInterval(yourmom);
             document.getElementById('countdown').style.display = 'none';
-            document.getElementById('fridayCheck').style.display = 'block';
+            checkForDay('friday')
         }
     }
 

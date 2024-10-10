@@ -1,0 +1,49 @@
+body {
+    background: red;
+    width: 250px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#mainGrid {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr 6.4fr 2fr 0.8fr;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
+    border: black solid 2px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.plot {
+    border: 1px solid black; /* Optional: add a border to each cell for visibility */
+    background-color: white; /* Set a color to make the cells visible */
+}
+
+#imageS {
+    width: 250px;
+    height: 250px;
+}
+
+.plot.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plot.button > button {
+    height: 100px;
+    width: 250px;
+    border: 3px black solid;
+    border-radius: 15px;
+}
+
+#backCard {
+    width: 75%;
+}
+
+#backCardDiv {
+    display: flex;
+    justify-content: center;
+}
