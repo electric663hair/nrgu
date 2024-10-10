@@ -20,6 +20,7 @@ function checkForDay(inputDay) {
     if (inputDay === day) {
         document.getElementById('value').innerHTML = "Ja!"
         document.getElementById('value').style.color = "green";
+
     } else {
         document.getElementById('value').innerHTML = "Nei\n:("
         document.getElementById('value').style.color = "red";
@@ -42,7 +43,7 @@ function countdown(seconds) {
 
     seconds += 1;
 
-    const yourmom = setInterval(countdownProcess, 1000);
+    const yourmom = setInterval(countdownProcess, 1200);
     function countdownProcess() {
         seconds -= 1;
         document.getElementById('countdown').innerHTML = seconds;
