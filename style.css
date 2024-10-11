@@ -3,6 +3,11 @@ html {
     padding: 0;
     background: #222831;
 }
+
+body{
+    margin: 0 !important;
+}
+
 h1 {
     text-align: center;
     font-size: 3rem;
@@ -79,4 +84,12 @@ p {
 }
 #nei {
     display: none;
+}
+
+#ja > h2 {
+    color: green;
+}
+
+#nei > h2 {
+    color: red;
 }

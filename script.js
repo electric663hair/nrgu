@@ -19,8 +19,11 @@ function checkForDay(inputDay) {
 
     if (inputDay === day) {
         document.getElementById('ja').style.display = "block";
+        document.querySelector("html").style.backgroundImage =  "url('./resourcres/happy-cat-cat.gif')"
+        document.querySelector("h1").style.color = "black";
     } else {
         document.getElementById('nei').style.display = "block";
+         document.querySelector("html").style.backgroundImage =  "url('./resourcres/crying-guy.gif')"
     }
 
     document.getElementById('dag').innerHTML = day;
@@ -48,7 +51,7 @@ function countdown(seconds) {
         if (seconds <= 0) {
             clearInterval(yourmom);
             document.getElementById('countdown').style.display = 'none';
-            checkForDay('friday')
+            checkForDay('fredag')
         }
     }
 
