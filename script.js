@@ -17,13 +17,41 @@ function checkForDay(inputDay) {
         day = "lørdag"
     }
 
+    var childrenCheering = new Audio('./resourcres/sound effects/kidsCheering.mp3');
+    var sadMusic = new Audio('./resourcres/sound effects/sad.mp3');
+    var blackGuyCryingMEME = new Audio('./resourcres/sound effects/amped-blackGuyCryingMEME.mp3');
+
     if (inputDay === day) {
         document.getElementById('ja').style.display = "block";
+        document.getElementById('nei').style.display = "none";
         document.querySelector("html").style.backgroundImage =  "url('./resourcres/happy-cat-cat.gif')"
         document.querySelector("h1").style.color = "black";
+        
+        childrenCheering.play();
+        childrenCheering.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+
     } else {
         document.getElementById('nei').style.display = "block";
-         document.querySelector("html").style.backgroundImage =  "url('./resourcres/crying-guy.gif')"
+        document.getElementById('ja').style.display = "none";
+        document.querySelector("html").style.backgroundImage =  "url('./resourcres/crying-guy.gif')"
+
+        sadMusic.volume = 0.25;
+        sadMusic.play();
+        sadMusic.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+
+        blackGuyCryingMEME.play();
+        blackGuyCryingMEME.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+
+
     }
 
     document.getElementById('dag').innerHTML = day;
@@ -34,24 +62,45 @@ function closeWindow() {
   window.close();
 }
 
+function repeatAudio(aaaaudio) {
+    aaaaudio.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
+
+var drumRoll = new Audio('./resourcres/sound effects/drumroll.mp3');
+
 function countdown(seconds) {
+    const countdownaaaa = document.getElementById("countdown")
+
     document.getElementById('countdownBtn').style.display = 'none';
     document.getElementById('no-button').style.display = 'none';
     document.getElementById('no-text').style.display = 'none';
-    document.getElementById('countdown').style.display = 'block';
+    countdownaaaa.style.display = 'block';
 
+    drumRoll.play();
 
     seconds += 1;
 
-    const yourmom = setInterval(countdownProcess, 1000);
+    const yourmom = setInterval(countdownProcess, 1300);
     function countdownProcess() {
         seconds -= 1;
         document.getElementById('countdown').innerHTML = seconds;
+        
+        if (seconds == 3) {
+            countdownaaaa.style.fontSize = "10rem"
+        }   else if (seconds == 2) {
+            countdownaaaa.style.fontSize = "13rem"
+        }   else if (seconds == 1) {
+            countdownaaaa.style.fontSize = "18rem"
+        }
+        
 
         if (seconds <= 0) {
             clearInterval(yourmom);
             document.getElementById('countdown').style.display = 'none';
-            checkForDay('fredag')
+            checkForDay('fredafg')
         }
     }
 
