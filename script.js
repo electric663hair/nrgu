@@ -28,10 +28,6 @@ function checkForDay(inputDay) {
         document.querySelector("h1").style.color = "black";
         
         childrenCheering.play();
-        childrenCheering.addEventListener('ended', function() {
-            this.currentTime = 0;
-            this.play();
-        }, false);
 
     } else {
         document.getElementById('nei').style.display = "block";
