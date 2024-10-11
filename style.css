@@ -16,8 +16,6 @@ h1 {
 h2 {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 10rem;
-    color: yellow;
 }
 h3 {
     color: white;
@@ -93,6 +91,7 @@ p {
 
 #nei > h2 {
     color: red;
+    font-size: 15rem;
 }
 
 h2, p {

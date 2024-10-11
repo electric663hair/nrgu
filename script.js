@@ -62,13 +62,6 @@ function closeWindow() {
   window.close();
 }
 
-function repeatAudio(aaaaudio) {
-    aaaaudio.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-}
-
 var drumRoll = new Audio('./resourcres/sound effects/drumroll.mp3');
 
 function countdown(seconds) {
@@ -100,7 +93,7 @@ function countdown(seconds) {
         if (seconds <= 0) {
             clearInterval(yourmom);
             document.getElementById('countdown').style.display = 'none';
-            checkForDay('fredafg')
+            checkForDay('fredag')
         }
     }
 
