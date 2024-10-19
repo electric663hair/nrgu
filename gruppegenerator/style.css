@@ -97,7 +97,7 @@ h2 {
 }
 
 #listContainer {
-    padding: 1rem 0 5rem 0;
+    padding: 1rem 0 7vh 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
