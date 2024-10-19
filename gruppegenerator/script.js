@@ -145,4 +145,6 @@ const copyToClipboard = async (str) => {
     }
     
     throw new Error('Clipoard not supported!');
+    alert('Clipoard not supported!');
+}
 }
