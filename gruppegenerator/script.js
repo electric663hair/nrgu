@@ -12,7 +12,6 @@ const minGroupSize = 2;
 const maxGroupSize = 28;
 
 function main() {
-    copyClickListeners();
 
     const groupSizeInput = document.querySelector('input#groupSize');
     groupSizeInput.min = minGroupSize;
@@ -125,15 +124,20 @@ function makeGroupLists(values, groupSize) {
 
         container.appendChild(listDiv);
     });
+
+    
+    copyClickListeners();
 }
 
 function copyClickListeners() {
-    const nameFields = document.querySelectorAll('.output');
-    let activeContent = "";
+    const nameFields = document.querySelectorAll('div.output');
+    var activeContent = "";
     for (var i = 0; i < nameFields.length; i++) {
         nameFields[i].addEventListener('click', function() {
             activeContent = this.innerText;
+            console.log(activeContent + "neger");
             activeContent = activeContent.slice(0, -4);
+            console.log(activeContent);
             copyToClipboard(activeContent);
         })
     }
