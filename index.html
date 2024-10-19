@@ -1,51 +1,22 @@
 <!DOCTYPE html>
-<html lang="no">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Er det Fredag?</title>
-        
-        <link rel="icon" type="image/png" href="/resourcres/nrgu_logo.png">
-        <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRGu - Gruppe Generator</title>
 
-    </head>
-    <body>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="btns">
+        <a href="./erdetfredag">
+            <p>Er det Fredag?</p>
+        </a>
+        <a href="./gruppeGenerator">
+            <p>Gruppe Generator</p>
+        </a>
+    </div>
 
-        <h1>Er det Fredag?</h1>
-        
-        <div id="0">
-            <h3 id="no-text" style="text-align: center; margin-top: 100px;">Vil du virkelig vite om det er fredag i dag?!</h2>
-            <p id="countdown">3</p>
-
-            <div class="button-container" id="no-button" style="display: flex; justify-content: center;">
-                <button class="button" id="countdownBtn" onclick="countdown(2)">Ja!</button>
-                <!--<button id="no-button" onclick="closeWindow()">Nei!</button> -->
-
-                <div class="button">
-                    <a href="about:blank" style="text-decoration: none; color: black;">Nei!</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="ja">
-            <h2>JA!</h2>
-        </div>
-
-        <div id="nei">
-            <h2>NEI!:(</h2>
-        </div>
-
-
-        <div class="footer">
-            <h4>Laget av Aron og Mark i 9R på NRG-U Sandivka</h4>
-        </div>
-
-        <!-- <div id="fridayCheck">
-            <h2 id="value"><noscript>Error: JavaScript not Found</noscript></h2>
-        </div> -->
-
-
-        <script src="script.js"></script>
-    </body>
+    <script src="./script.js"></script>
+</body>
 </html>

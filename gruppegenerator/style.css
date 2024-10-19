@@ -1,0 +1,117 @@
+html {
+    overflow-y: scroll !important;
+}
+
+#groupDiv > label{
+    color: white;
+    padding: 1%;
+}
+
+label {
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#inputs {
+    height: 40vh;
+    margin: 5vh 5% 0 5%;
+
+    border-radius: 5rem;
+    background-color: #343a42;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#checkboxes {
+    width: 40%;
+    padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+}
+#checkboxes > div, #checkboxes > div > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#checkboxes > div > label {
+    font-size: 2rem;
+}
+#checkboxes > input[type="submit"] {
+    margin-top: 2rem;
+    padding: 1.5rem 0 1.5rem 0;
+    width: 50%;
+
+    background: transparent;
+    border: white solid 2px;
+    border-radius: 5rem;
+
+    color: white;
+
+    display: flex;
+    align-self: center;
+
+    transition: all 0.3s;
+}
+#checkboxes > input[type="submit"]:hover {
+    background: #454c55;
+    border-color: grey;
+    border-radius: 1rem;
+}
+
+#groupDiv {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#groupDiv > input[type="number"] {
+    width: 13rem;
+    height: 5rem;
+    padding: 0 1rem 0 1rem;
+
+    border: 3px solid gray;
+    border-radius: 2rem;
+
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+#listContainer {
+    padding: 1rem 0 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#listContainer > div {
+    margin: .2rem;
+    padding: .4rem;
+
+    border: white solid 2px;
+
+    transition: all 0.3s;
+}
+#listContainer > div:hover {
+    background-color: #343a42;
+    border: grey solid 2px;
+    border-radius: 2rem;
+}

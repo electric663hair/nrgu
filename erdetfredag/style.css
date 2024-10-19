@@ -1,0 +1,79 @@
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #EEEEEE;
+}
+h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+h3 {
+    color: white;
+}
+p {
+    text-align: center;
+    font-size: 8rem;
+    color: green;
+
+}
+
+#dagReveal {
+    display: none;
+}
+.sprsml {
+    display: none;
+}
+#fridayCheck {
+    display: none;
+}
+#countdown {
+    display: none;
+}
+
+.button{
+    width: 10%;
+    padding: 30px 0 30px 0; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: #EEEEEE; 
+    border: grey 1px solid; 
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.button-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2%;
+}
+
+.button:hover{
+    background-color: #00ADB5;
+    border: #EEEEEE 1px solid;
+    transition: all 0.2s;
+}
+
+#ja {
+    display: none;
+}
+#nei {
+    display: none;
+}
+
+#ja > h2 {
+    color: green;
+    font-size: 20rem;
+}
+
+#nei > h2 {
+    color: red;
+    font-size: 15rem;
+}
+
+h2, p {
+    padding: 0;
+    margin: 0;
+}

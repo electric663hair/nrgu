@@ -1,100 +1,59 @@
-html {
-    margin: 0;
-    padding: 0;
-    background: #222831;
+a {
+    color: black;
+    text-decoration: none;
+    padding: 5% 10% 5% 10%;
+    background-color: #fadf87;
+    border: solid #c25bc2 5px;
+    border-radius: 50px;
 }
 
-body{
-    margin: 0 !important;
+a:hover {
+    background-color: #23b32a;
+    border-color: #4f3a8a;
 }
 
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    color: #EEEEEE;
-}
-h2 {
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-h3 {
-    color: white;
-}
-p {
-    text-align: center;
-    font-size: 8rem;
-    color: green;
-
-}
-
-#dagReveal {
-    display: none;
-}
-.sprsml {
-    display: none;
-}
-#fridayCheck {
-    display: none;
-}
-#countdown {
-    display: none;
-}
-
-.button{
-    width: 10%;
-    padding: 30px 0 30px 0; 
-    display: inline-flex; 
-    justify-content: center; 
-    align-items: center; 
-    background: #EEEEEE; 
-    border: grey 1px solid; 
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-.button-container{
+body {
     display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 2%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
-.button:hover{
-    background-color: #00ADB5;
-    border: #EEEEEE 1px solid;
-    transition: all 0.2s;
-}
-
-.footer{
-    width: 100%;
-    height: 7vh;
-    position:fixed;
-    bottom: 0;
+div.btns {
     display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+div.btns > a {
+    transition: all 0.5s;
+}
+
+div.btns > a:hover {
+    background-color: pink;
+}
+
+div.backBtn {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: #e1e1e1;
-    background-color: #393E46;
-}
-#ja {
-    display: none;
-}
-#nei {
-    display: none;
+    height: 100%;
+    width: 100%;
 }
 
-#ja > h2 {
-    color: green;
-    font-size: 20rem;
+div.backBtn > a {
+    padding: 2% 5% 2% 5%;
+    border-radius: 50px;
+    transition: all .5s;
 }
-
-#nei > h2 {
-    color: red;
-    font-size: 15rem;
-}
-
-h2, p {
-    padding: 0;
-    margin: 0;
+div.backBtn > a:hover {
+    padding: 7% 5% 2% 3%;
+    border-radius: 50%;
 }
