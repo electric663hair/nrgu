@@ -17,3 +17,28 @@ body{
     font-size: 1.75rem;
     text-align: center;
 }
+
+.backButton {
+    text-decoration: none;
+    padding: 0 1vw 0 1vw;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    display: inline-flex;
+    justify-content: start;
+    align-items: start;
+    color: #e1e1e1;
+    background-color: transparent;
+    font-size: 1.75rem;
+    text-align: center;
+    background-color: transparent;
+    border: solid white .2rem;
+    border-radius: .75rem;
+
+    transition: all .2s;
+}
+.backButton:hover {
+    border-style: dashed;
+    background-color: #343a42;
+    border-color: grey;
+}

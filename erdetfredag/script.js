@@ -17,14 +17,15 @@ function checkForDay(inputDay) {
         day = "lørdag"
     }
 
-    var childrenCheering = new Audio('./resourcres/sound effects/kidsCheering.mp3');
-    var sadMusic = new Audio('./resourcres/sound effects/sad.mp3');
-    var blackGuyCryingMEME = new Audio('./resourcres/sound effects/amped-blackGuyCryingMEME.mp3');
+    var childrenCheering = new Audio('../resourcres/sound effects/kidsCheering.mp3');
+    var sadMusic = new Audio('../resourcres/sound effects/sad.mp3');
+    var blackGuyCryingMEME = new Audio('../resourcres/sound effects/amped-blackGuyCryingMEME.mp3');
 
     if (inputDay === day) {
         document.getElementById('ja').style.display = "block";
         document.getElementById('nei').style.display = "none";
-        document.querySelector("html").style.backgroundImage =  "url('./resourcres/happy-cat-cat.gif')"
+        document.querySelector("body").style.background = "transparent";
+        document.querySelector("html").style.backgroundImage =  "url('../resourcres/happy-cat-cat.gif')"
         document.querySelector("h1").style.color = "black";
         
         childrenCheering.play();
@@ -32,7 +33,8 @@ function checkForDay(inputDay) {
     } else {
         document.getElementById('nei').style.display = "block";
         document.getElementById('ja').style.display = "none";
-        document.querySelector("html").style.backgroundImage =  "url('./resourcres/crying-guy.gif')"
+        document.querySelector("body").style.background = "transparent";
+        document.querySelector("html").style.backgroundImage =  "url('../resourcres/crying-guy.gif')"
 
         sadMusic.volume = 0.25;
         sadMusic.play();
@@ -49,8 +51,6 @@ function checkForDay(inputDay) {
 
 
     }
-
-    document.getElementById('dag').innerHTML = day;
 }
 
 function closeWindow() {
@@ -58,7 +58,7 @@ function closeWindow() {
   window.close();
 }
 
-var drumRoll = new Audio('./resourcres/sound effects/drumroll.mp3');
+var drumRoll = new Audio('../resourcres/sound effects/drumroll.mp3');
 
 function countdown(seconds) {
     const countdownaaaa = document.getElementById("countdown")
@@ -106,4 +106,7 @@ function mattekalkulatorskatteikkemattekalkulator() {
         konto += nettoLønnIMnd;
         console.log("\n=====" + i + "=====\n" + konto + " : " + nettoLønnIMnd)
     }
+}
+function changeBackgroundSize(value) {
+     document.querySelector('html', 'body').style.backgroundSize = value;
 }

@@ -148,6 +148,7 @@ const copyToClipboard = async (str) => {
         return await navigator.clipboard.writeText(str);
     }
     
-    throw new Error('Clipoard not supported!');
+    
     alert('Clipoard not supported!');
+    throw new Error('Clipoard not supported!');
 }
