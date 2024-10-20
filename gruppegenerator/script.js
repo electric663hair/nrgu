@@ -88,8 +88,6 @@ function makeGroups(groupSize, classes) {
         document.getElementById('10r').checked = true;
     }
 
-    console.log()
-
     makeGroupLists(nameBundle, groupSize);
 }
 
@@ -119,8 +117,8 @@ function makeGroupLists(values, groupSize) {
     targetLists.forEach((list, i) => {
 
         const listDiv = document.createElement('div');
-        listDiv.classList.add('output');
-        listDiv.innerHTML = `<h2>Gruppe ${(i+1)}: ${list} (${list.length})</h2>`;
+        listDiv.classList.add('output', 'popup');
+        listDiv.innerHTML = `<h2>Gruppe ${(i+1)}: ${list} (${list.length})</h2><span class='popuptext' id='myPopup'>Copied to clipboard!</span>`;
 
         container.appendChild(listDiv);
     });
@@ -134,10 +132,9 @@ function copyClickListeners() {
     var activeContent = "";
     for (var i = 0; i < nameFields.length; i++) {
         nameFields[i].addEventListener('click', function() {
+            togglePopup(this);
             activeContent = this.innerText;
-            console.log(activeContent + "neger");
             activeContent = activeContent.slice(0, -4);
-            console.log(activeContent);
             copyToClipboard(activeContent);
         })
     }
