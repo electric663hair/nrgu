@@ -44,26 +44,27 @@ p {
 #checkboxes > div > label {
     font-size: 2rem;
 }
-#checkboxes > input[type="submit"] {
+#generateBtn {
     margin-top: 2rem;
     padding: 1.5rem 0 1.5rem 0;
     width: 50%;
 
     background: transparent;
-    border: white solid 2px;
+    border: grey .1rem solid;
     border-radius: 5rem;
 
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 
     display: flex;
     align-self: center;
 
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
-#checkboxes > input[type="submit"]:hover {
-    background: #454c55;
-    border-color: grey;
-    border-radius: 1rem;
+#generateBtn:hover {
+    background-color: #00ADB5;
+    border-color: #EEEEEE;
 }
 
 #groupDiv {

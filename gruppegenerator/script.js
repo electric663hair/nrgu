@@ -39,53 +39,73 @@ function aquireSearchParams() {
         if (groupSize >= minGroupSize && groupSize <= maxGroupSize) {
             makeGroups(groupSize, classes);
         } else {
-            alert("The chosen groupsize is not a valid value, it has to be between 2 and 28!");
+            // alert("The chosen groupsize is not a valid value, it has to be between 2 and 28!");
         }
+
+        updateCheckboxes(classes, groupSize);
 
     }
 }
 
-function makeGroups(groupSize, classes) {
-    
-    var activeClasses = [];
-    var nameBundle = [];
+function updateCheckboxes(classes, groupSize) {
 
     document.querySelector('#groupSize').value = groupSize;
 
     if (classes['8n'] == "on") {
+    document.getElementById('8n').checked = true;
+    }
+    if (classes['8r'] == "on") {
+        document.getElementById('8r').checked = true;
+    }
+    if (classes['8g'] == "on") {
+        document.getElementById('8g').checked = true;
+    }
+    if (classes['9n'] == "on") {
+        document.getElementById('9n').checked = true;
+    }
+    if (classes['9r'] == "on") {
+        document.getElementById('9r').checked = true;
+    }
+    if (classes['10n'] == "on") {
+        document.getElementById('10n').checked = true;
+    }
+    if (classes['10r'] == "on") {
+        document.getElementById('10r').checked = true;
+    }
+}
+
+function makeGroups(groupSize, classes) {
+
+    var activeClasses = [];
+    var nameBundle = [];
+
+    if (classes['8n'] == "on") {
         activeClasses.push('8n');
         nameBundle.push(...class8n);
-        document.getElementById('8n').checked = true;
     }
     if (classes['8r'] == "on") {
         activeClasses.push('8r')
         nameBundle.push(...class8r);
-        document.getElementById('8r').checked = true;
     }
     if (classes['8g'] == "on") {
         activeClasses.push('8g')
         nameBundle.push(...class8g);
-        document.getElementById('8g').checked = true;
     }
     if (classes['9n'] == "on") {
         activeClasses.push('9n')
         nameBundle.push(...class9n);
-        document.getElementById('9n').checked = true;
     }
     if (classes['9r'] == "on") {
         activeClasses.push('9r')
         nameBundle.push(...class9r);
-        document.getElementById('9r').checked = true;
     }
     if (classes['10n'] == "on") {
         activeClasses.push('10n')
         nameBundle.push(...class10n);
-        document.getElementById('10n').checked = true;
     }
     if (classes['10r'] == "on") {
         activeClasses.push('10r')
         nameBundle.push(...class10r);
-        document.getElementById('10r').checked = true;
     }
 
     makeGroupLists(nameBundle, groupSize);

@@ -26,6 +26,7 @@ a {
     height: 7vh;
     position:fixed;
     bottom: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +36,7 @@ a {
     text-align: center;
 }
 .footer:hover {
-    color: #ff00aa;
+    color: #af6bd6;
 }
 
 /* ===== Styling for the backButton that is displayed on all subpages ===== */

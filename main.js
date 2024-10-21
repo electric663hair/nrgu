@@ -15,12 +15,15 @@ if (currentPath !== "/") {
 function makeFooter(creators) {
     
     const footerDiv = document.createElement("div");
-    footerDiv.classList.add("footer");
+    
+    footerDiv.innerHTML = "<div class='footer'><h4>Laget av " + creators + " i 9R på NRGu Sandvika</h4></div>"
 
-    const footerH4 = document.createElement("h4");
-    footerH4.innerHTML = "<h4>Laget av " + creators + " i 9R på NRGu Sandvika</h4>";
+    // footerDiv.classList.add("footer");
+    
+    // const footerH4 = document.createElement("h4");
+    // footerH4.innerHTML = "<h4>Laget av " + creators + " i 9R på NRGu Sandvika</h4>";
 
-    footerDiv.appendChild(footerH4);
+    // footerDiv.appendChild(footerH4);
     dBody.appendChild(footerDiv);
 
 }
