@@ -154,7 +154,7 @@ function copyClickListeners() {
         nameFields[i].addEventListener('click', function() {
             togglePopup(this);
             activeContent = this.innerText;
-            activeContent = activeContent.slice(0, -4);
+            activeContent = activeContent.slice(0, -25);
             copyToClipboard(activeContent);
         })
     }
