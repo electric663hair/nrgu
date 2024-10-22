@@ -1,6 +1,6 @@
 /* ===== Allows scrolling but not showing the scrollbar ===== */
 html {
-    overflow-y: scroll !important;
+    overflow: hidden scroll !important;
     /* scrollbar-color: transparent transparent; */
 }
 ::-webkit-scrollbar {
@@ -23,7 +23,7 @@ a {
 /* ===== Styling for the footer that is displayed on all pages ===== */
 .footer {
     width: 100%;
-    height: 7vh;
+    height: calc(20vh - 7vw);
     position:fixed;
     bottom: 0;
     left: 0;
@@ -32,7 +32,7 @@ a {
     align-items: center;
     color: #e1e1e1;
     background-color: #393E46;
-    font-size: 1.75rem;
+    font-size: 3vh;
     text-align: center;
 }
 

@@ -22,11 +22,7 @@ if (currentPath !== "/") {
 
     document.addEventListener("keydown", function(event) {
         if (event.key == "Escape" || event.key == "Tab") {
-            if (currentPath == "/dagsrutine/main/") {
-                window.close();
-            } else {
-                window.location.href = "/";
-            }
+            window.location.href = "/";
         } else if (event.key == "Enter") {
             const enterElement = document.querySelector(".clickOnEnter");
             enterElement.click();

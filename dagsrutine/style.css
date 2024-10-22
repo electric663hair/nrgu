@@ -24,7 +24,7 @@ h1{
     padding: 0;
 }
 
-h2{
+h2 {
     color: #433878;
     text-shadow: black .08vw .13vw;
     font-weight: bold;
@@ -33,27 +33,28 @@ h2{
     padding: 0;
 }
 
-h3{
+h3 {
     font-size: 3vw;
     color: #433878;
     
 }
 
-.hver-dag{
+.hver-dag {
     width: 70%;
 }
 
-.velg-3{
+.velg-3 {
     width: 70%;
     padding-bottom: 7vh;
 }
 
-.header{
+.header {
     width: 70%;
     height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding-bottom: 2vh;
     border-bottom: #433878 solid 2px;
 }
 
@@ -101,36 +102,37 @@ h3{
     color: #085c5c; /* Standard teal hex code */
 }
 
-.pink{
-    color: rgb(237, 117, 211);
+.pink {
+    color: #ed75d3;
 }
 
-li{
+li {
     font-size: 2.5vw;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     width: 70%;
 }
 
-.fin-boks{
+.fin-boks {
     height: 2.5vw !important;
     width: 2.5vw !important;
     accent-color: #7E60BF !important;
 }
-span{
+span {
     width: 40%;
     display: flex;
     justify-content: end;
 }
 
-.welcome-container{
+.welcome-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.welcome-container > button{
+.welcome-container > button {
     border: none;
     height: 3vw;
     width: 10vw;
@@ -143,7 +145,7 @@ span{
     transition: all 0.1s;
 }
 
-.welcome-container > button:hover{
+.welcome-container > button:hover {
     background-color: #433878;
     color: white;
 }
