@@ -1,3 +1,9 @@
+const listItems = document.querySelectorAll("li")
+
+for (let i = 0; i < listItems.length; i++){
+    listItems[i].appendChild( document.createElement("span"))
+}
+
 const checkBoks = document.querySelectorAll("span");
 var count = 0;
 
