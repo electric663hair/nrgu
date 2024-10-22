@@ -111,3 +111,38 @@ span{
     display: flex;
     justify-content: end;
 }
+
+.main-content{
+    display: none;
+}
+
+.welcome{
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.welcome-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-container > button{
+    height: 250px;
+    width: 250px;
+    background-color: #7E60BF;
+    color: white;
+    font-weight: bold;
+    border: #433878 solid 10px;
+    font-size: 30px;
+    border-radius: 50%;
+    margin-top: 15vh;
+    transition: all 0.1s;
+}
+
+.welcome-container > button:hover{
+    border: solid black 10px;
+    background-color: #433878;
+    color: white;
+}

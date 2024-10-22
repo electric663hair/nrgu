@@ -8,11 +8,17 @@
 </head>
 <body>
     <div class="header">
-        <h1>System</h1>
+        <h1>Dagsrutine</h1>
         <h2>Uke 43</h2>
     </div>
 
-    <div class="hver-dag">
+    <div class="welcome-container">
+        <h2 class="welcome">Velkommen til dagsplanleggeren!</h2>
+        <button onclick="showMain()">Start Nå!</button>
+    </div>
+
+
+    <div class="hver-dag main-content">
         <h3>Hver dag:</h3>
 
         <ul>
@@ -24,7 +30,7 @@
         </ul>
     </div>
 
-    <div class="velg-3">
+    <div class="velg-3 main-content">
         <h3>Velg 3 / 5 i Helg:</h3>
         <ul>
             <li class="dark-blue">Programmering - 1 time</li>
@@ -39,7 +45,7 @@
             <li class="orange">Besøk - 1+ time</li>
         </ul>
     </div>
-
+    
     <script src="index.js"></script>
 </body>
 </html>

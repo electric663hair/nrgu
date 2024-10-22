@@ -1,3 +1,12 @@
+function showMain(){
+    const main = document.querySelectorAll(".main-content");
+    for (let i = 0; i < main.length; i++){
+        document.querySelectorAll(".main-content")[i].style.display = "block"
+    }
+
+    document.querySelector(".welcome-container").style.display = "none"
+}
+
 const listItems = document.querySelectorAll("li")
 
 for (let i = 0; i < listItems.length; i++){
