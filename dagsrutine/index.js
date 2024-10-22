@@ -3,7 +3,7 @@ function showMain(){
     for (let i = 0; i < main.length; i++){
         document.querySelectorAll(".main-content")[i].style.display = "block"
     }
-
+    document.querySelector("body").classList.remove("bg-img")
     document.querySelector(".welcome-container").style.display = "none"
 }
 
