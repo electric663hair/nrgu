@@ -65,6 +65,12 @@ a {
     border-color: grey;
 }
 
+input[type="checkbox"] {
+    accent-color: #00adb5;
+    height: 1.5vw;
+    width: 1.5vw;
+}
+
 
 
 
