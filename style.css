@@ -92,11 +92,10 @@ div.backBtn > a:hover {
 .cardImgDiv {
     display: flex;
     background: black;
-    padding: 4rem 2rem 4rem 2rem;
     border-radius: 1rem;
 }
 .cardImgDiv > img {
-    height: 200px;
+    width: 100%;
 
     border-radius: 1rem;
 }

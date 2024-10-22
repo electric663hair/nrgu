@@ -35,9 +35,6 @@ a {
     font-size: 1.75rem;
     text-align: center;
 }
-.footer:hover {
-    color: #af6bd6;
-}
 
 /* ===== Styling for the backButton that is displayed on all subpages ===== */
 .backButton {
