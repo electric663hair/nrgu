@@ -150,3 +150,18 @@ span{
     background-color: #433878;
     color: white;
 }
+
+.exitDagplanlegger {
+    border: none;
+    height: 3vw;
+    width: 10vw;
+    background-color: #7E60BF;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 5px;
+    transition: all 0.1s;
+    position: fixed;
+    top: 1rem;
+    left: 1rem; 
+}

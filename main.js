@@ -11,16 +11,27 @@ document.addEventListener('keydown', function(event) {
 const currentPath = window.location.pathname;
 
 if (currentPath !== "/") {
-    // ===== Creates the Backbutton on the page
-    const backButton = document.createElement("a");
-    backButton.classList.add("backButton")
-    backButton.innerText = "Tilbake";
-    backButton.href = "/";
-    dBody.insertBefore(backButton, dBody.firstChild);
+    if (currentPath !== "/dagsrutine/"  && currentPath !== "/dagsrutine/main/") {
+        // ===== Creates the Backbutton on the any subpage except "dagsrutine" because it has its own backButton
+        const backButton = document.createElement("a");
+        backButton.classList.add("backButton")
+        backButton.innerText = "Tilbake";
+        backButton.href = "/";
+        dBody.insertBefore(backButton, dBody.firstChild);
+    }
 
     document.addEventListener("keydown", function(event) {
         if (event.key == "Escape" || event.key == "Tab") {
-            window.location.href = backButton.href;
+            if (currentPath == "/dagsrutine/main/") {
+                window.close();
+            } else {
+                window.location.href = "/";
+            }
+        } else if (event.key == "Enter") {
+            const enterElement = document.querySelector(".clickOnEnter");
+            enterElement.click();
+            enterElement.getAttribute("onclick");
+            eval(enterElement)
         }
     })
 } else if (currentPath == "/") {
@@ -28,7 +39,7 @@ if (currentPath !== "/") {
         const cards = document.querySelectorAll(".card");
         for (var i = 0; i < cards.length; i++) {
             if (event.key == i+1) {
-                window.location.href = cards[i].href;
+                window.location.href = cards[i].getAttribute("onclick").match(/'(.*?)'/)[1];;
             }   
         }
     })
