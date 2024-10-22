@@ -15,12 +15,12 @@ if (currentPath !== "/") {
     const backButton = document.createElement("a");
     backButton.classList.add("backButton")
     backButton.innerText = "Tilbake";
-    backButton.href = "..";
+    backButton.href = "/";
     dBody.insertBefore(backButton, dBody.firstChild);
 
     document.addEventListener("keydown", function(event) {
         if (event.key == "Escape" || event.key == "Tab") {
-            window.location.href = "/";
+            window.location.href = backButton.href;
         }
     })
 } else if (currentPath == "/") {
