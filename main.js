@@ -1,5 +1,12 @@
 const dBody = document.body;
 
+// ===== Makes the tab key not able to select elements on the website :)
+document.addEventListener('keydown', function(event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
 // ===== Checks if the file is run from the root directory or not
 const currentPath = window.location.pathname;
 
@@ -10,6 +17,21 @@ if (currentPath !== "/") {
     backButton.innerText = "Tilbake";
     backButton.href = "..";
     dBody.insertBefore(backButton, dBody.firstChild);
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key == "Escape" || event.key == "Tab") {
+            window.location.href = "/";
+        }
+    })
+} else if (currentPath == "/") {
+    document.addEventListener("keydown", function(event) {
+        const cards = document.querySelectorAll(".card");
+        for (var i = 0; i < cards.length; i++) {
+            if (event.key == i+1) {
+                window.location.href = cards[i].href;
+            }   
+        }
+    })
 }
 
 function makeFooter(creators) {
