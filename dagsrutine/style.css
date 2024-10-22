@@ -166,3 +166,8 @@ span{
     top: 1rem;
     left: 1rem; 
 }
+
+.exitDagplanlegger:hover {
+    background-color: #433878;
+    color: white;
+}
