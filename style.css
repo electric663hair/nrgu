@@ -11,38 +11,6 @@ a {
     border-color: #4f3a8a;
 } */
 
-
-.button-container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 2%;
-    text-align: center;
-}
-
-.button{
-    width: 15%;
-    padding: 30px 0 30px 0;
-
-    background: #EEEEEE;
-    border: grey 1px solid;
-    border-radius: 10px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: all 0.2s;
-}
-.button:hover{
-    background-color: #00ADB5;
-    border: #EEEEEE 1px solid;
-}
-
-
 body {
     display: flex;
     flex-direction: column;
@@ -51,6 +19,15 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+}
+
+.button-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1vw;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 div.btns {
@@ -87,4 +64,49 @@ div.backBtn > a {
 div.backBtn > a:hover {
     padding: 7% 5% 2% 3%;
     border-radius: 50%;
+}
+
+.card{
+    width: 15%;
+    padding: 30px 0 30px 0;
+
+    background: #EEEEEE;
+    border: grey 1px solid;
+    border-radius: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transition: all 0.2s;
+}
+.card:hover{
+    background-color: #00ADB5;
+    border: #EEEEEE 1px solid;
+}
+
+.cardImgDiv {
+    display: flex;
+    background: black;
+    padding: 4rem 2rem 4rem 2rem;
+    border-radius: 1rem;
+}
+.cardImgDiv > img {
+    height: 200px;
+
+    border-radius: 1rem;
+}
+
+.cardTitleDiv {
+    padding: .2rem .5rem .2rem .5rem;
+    border-radius: 1rem;
+    background-color: grey;
+    margin-bottom: 1rem;
+}
+.cardTitleDiv > p {
+    font-size: 1.3rem;
 }
