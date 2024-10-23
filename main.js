@@ -68,7 +68,7 @@ if (currentPath !== "/") {
         for (var i = 0; i < cards.length; i++) {
             if (event.key == i+1) {
                 if (cards[i].getAttribute("onclick")) {
-                    window.location.href = cards[i].getAttribute("onclick").match(/'(.*?)'/)[1];;
+                    eval(showPrompt(cards[i].getAttribute("onclick").match(/'(.*?)'/)[1]));
                 }
             }   
         }
