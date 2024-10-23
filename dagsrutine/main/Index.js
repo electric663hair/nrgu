@@ -71,8 +71,17 @@ function makeActivity() {
   }
 
     document.getElementById("createActivityButton").addEventListener("click", function() {
-        document.getElementById("lagreHverDag-btn").classList.remove("no-content")
-        makeActivity();
+
+        const form = document.getElementById("activityForm");
+        
+        if (form.checkValidity()) {
+
+            document.getElementById("lagreHverDag-btn").classList.remove("no-content")
+            makeActivity();
+        } else {
+            form.reportValidity();
+        }
+
     })
 
     function lagreHverDag() {

@@ -81,3 +81,14 @@ h3{
 .no-content{
     display: none;
 }
+
+fieldset{
+    display: flex;
+    justify-content: start;
+    gap: 7%;
+    width: 70%;
+}
+
+legend{
+    font-size: 20px;
+}
