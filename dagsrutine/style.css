@@ -33,7 +33,6 @@ h1{
     padding: 0;
 }
 
-<<<<<<< Updated upstream
 h2 {
     color: #433878;
     text-shadow: black .08vw .13vw;
@@ -62,7 +61,7 @@ h3 {
     width: 70%;
     height: 15vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: baseline;
     padding-bottom: 2vh;
     border-bottom: #433878 solid 2px;
@@ -134,8 +133,6 @@ span {
     display: flex;
     justify-content: end;
 }
-=======
->>>>>>> Stashed changes
 
 .welcome-container {
     display: flex;

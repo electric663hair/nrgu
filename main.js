@@ -1,3 +1,10 @@
+function password(subpage){
+    const answer = prompt("Hva er passordet?!")
+    if (answer === "Enigma$"){
+        window.location.href=`/${subpage}/`;
+    }
+}
+
 const dBody = document.body;
 
 var softClick = new Audio("/resourcres/soundeffects/softClick-Amplified.wav");
@@ -8,14 +15,6 @@ document.addEventListener('keydown', function(event) {
         event.preventDefault();
     }
 });
-
-// ===== Adding clicksounds to all buttons ===== Does not work because of changing files
-// buttons = document.querySelectorAll("button");
-// for (var i = 0; i < buttons.length; i++) {
-//     buttons[i].addEventListener("click", function() {
-//         softClick.play()
-//     })
-// }
 
 // ===== Checks if the file is run from the root directory or not
 const currentPath = window.location.pathname;
