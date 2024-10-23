@@ -18,8 +18,10 @@
         <h1>Dagsrutine</h1>
         <h2 id="weekDisplay">Uke 0</h2>
     </div>
-
-
+ 
+    
+      <div class="hver-dag">
+        <h3>Hver dag:</h3>
         <fieldset>
             <legend>Opprett en rutine</legend>
             <form class="hverDagForm" id="activityForm">
@@ -37,17 +39,31 @@
             </form>
             <button id="createActivityButton">Opprett</button>
         </fieldset>
-      
-    
-      <div class="hver-dag">
-        <h3>Hver dag:</h3>
         <ul id="hverdagListe"></ul>
         <button class="no-content" id="lagreHverDag-btn" onclick="lagreHverDag()">Lagre!</button>
         </div>
 
         <div class="velg-3">
             <h3>Velg 3 hver dag:</h3>
+            <fieldset>
+                <legend>Opprett en rutine</legend>
+                <form class="hverDagForm" id="activityForm">
+                <input placeholder="aktivitet..." id="activity" name="activity" type="text" required>
+                <input placeholder="Varighet..." id="time" name="time" type="text" required>
+                <select name="color" id="colorPicker" required>
+                    <option value="">Velg en farge</option> <!-- Empty value forces user to pick a color -->
+                    <option value="dark-blue">Mørke Blå</option>
+                    <option value="red">Rød</option>
+                    <option value="green">Grønn</option>
+                    <option value="purple">Lilla</option>
+                    <option value="brown">Brun</option>
+                    <option value="orange">Oransje</option>
+                </select>
+                </form>
+                <button id="createActivityButton">Opprett</button>
+            </fieldset>            
             <ul id="velg"></ul>
+            <button class="no-content" id="lagreHverDag-btn" onclick="lagreHverDag()">Lagre!</button>
         </div>
       
     <script src="../../main.js"></script>

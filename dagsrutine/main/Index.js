@@ -71,14 +71,67 @@ function makeActivity() {
   }
 
     document.getElementById("createActivityButton").addEventListener("click", function() {
+        const form = document.getElementById("activityForm")
 
-        const form = document.getElementById("activityForm");
-        
         if (form.checkValidity()) {
 
             document.getElementById("lagreHverDag-btn").classList.remove("no-content")
             makeActivity();
         } else {
+
+            form.reportValidity();
+        }
+
+    })
+
+    function lagreHverDag() {
+        const listItems = document.querySelectorAll("li.needsCheckbox");
+        document.getElementById("lagreHverDag-btn").classList.add("no-content");
+    
+        listItems.forEach((item, index) => {
+            // Only add checkboxes if the item doesn't already have them
+            if (!item.querySelector("span")) {
+                const checkboxContainer = document.createElement("span");
+    
+                for (var i = 0; i < 7; i++) {
+                    var newCheckBox = document.createElement("input");
+                    newCheckBox.type = "checkbox";
+                    newCheckBox.classList.add("fin-boks");
+                    newCheckBox.name = `checkbox-${index}-${i}`;
+                    checkboxContainer.appendChild(newCheckBox);
+                }
+    
+                item.appendChild(checkboxContainer);
+                item.classList.remove("needsCheckbox");
+            }
+        });
+    }
+
+
+    function makeActivity() {
+        var activity = document.getElementById("activity").value;
+        var time = document.getElementById("time").value;
+        var color = document.getElementById("colorPicker").value;
+        const hverdagsListe = document.getElementById("hverdagListe");
+
+        var liElement = document.createElement("li");
+        liElement.innerText = `${activity}: ${time}`;
+        liElement.classList.add(color);
+
+        hverdagsListe.appendChild(liElement);
+        liElement.classList.add("needsCheckbox")
+
+    }
+
+    document.getElementById("createActivityButton").addEventListener("click", function() {
+        const form = document.getElementById("activityForm")
+
+        if (form.checkValidity()) {
+
+            document.getElementById("lagreHverDag-btn").classList.remove("no-content")
+            makeActivity();
+        } else {
+
             form.reportValidity();
         }
 

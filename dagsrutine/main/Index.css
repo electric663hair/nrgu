@@ -86,7 +86,7 @@ fieldset{
     display: flex;
     justify-content: start;
     gap: 7%;
-    width: 70%;
+    width: 100%;
 }
 
 legend{
