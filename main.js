@@ -1,9 +1,32 @@
-function password(subpage){
-    const answer = prompt("Hva er passordet?!")
-    if (answer === "Enigma$"){
-        window.location.href=`/${subpage}/`;
-    }
+let targetSubpage = '';
+
+function showPrompt(subpage) {
+    targetSubpage = subpage;
+    console.log(targetSubpage + "\n" + subpage)
+
+    document.getElementById('customPrompt').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
 }
+
+function submitPassword() {
+    const answer = document.getElementById('password').value;
+    if (answer === "Enigma$") {
+        console.log("Success!")
+        console.log(targetSubpage)
+        window.location.href = `/${targetSubpage}/`;
+        closePrompt();
+    } else {
+        alert('Incorrect password!\nTry again');
+    }
+
+    document.getElementById('password').value = '';
+}
+
+function closePrompt() {
+    document.getElementById('customPrompt').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
+
 
 const dBody = document.body;
 

@@ -6,12 +6,13 @@
     <title>NRG-u - Gruppe Generator</title>
 
     <link rel="icon" type="image/png" href="/resourcres/nrgu_logo.png">
+    <link rel="stylesheet" href="./password.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
     <div class="button-container">
-        <button class="card" onclick="password('erdetfredag')">
+        <button class="card" onclick="showPrompt('erdetfredag')">
             <div class="cardTitleDiv">
                 <p>Er det Fredag?</p>
             </div>
@@ -20,7 +21,7 @@
             </div>
         </button>
 
-        <button class="card" onclick="password('gruppegenerator')">
+        <button class="card" onclick="showPrompt('gruppegenerator')">
             <div class="cardTitleDiv">
                 <p>Gruppe Generator</p>
             </div>
@@ -29,7 +30,7 @@
             </div>
         </button>
 
-        <button class="card" onclick="password('dagsrutine')">
+        <button class="card" onclick="showPrompt('secretPage')">
             <div class="cardTitleDiv">
                 <p>Planlegg dagen din!</p>
             </div>
@@ -37,6 +38,17 @@
                 <img src="./resourcres/placeholder.jpg">
             </div>
         </button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="customPrompt">
+        <label for="password">Enter your password:</label>
+        <div id="passwordDiv">
+            <input type="password" id="password">
+        </div>
+        <button onclick="submitPassword()">Submit</button>
+        <button onclick="closePrompt()">Close</button>
     </div>
 
     <!-- <script src="./script.js"></script> -->
