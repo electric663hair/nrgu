@@ -1,8 +1,3 @@
-function showMain(){
-    // const main = document.querySelectorAll(".main-content");//for(leti=0;i<main.length; i++){//document.querySelectorAll(".main-content")[i].style.display="block"//}//document.querySelector("body").classList.remove("bg-img")//document.querySelector(".welcome-container").style.display = "none"//window.open("https://");
-    open(window.location.href + "main")
-}
-<<<<<<< Updated upstream
 
 const listItems = document.querySelectorAll("li")
 
@@ -79,7 +74,4 @@ Date.prototype.getWeek = function (dowOffset) {
 
 // Makes the h2 on the top display the current week of the year the clients comuter is in
 const weekDisplay = document.querySelector("#weekDisplay")
-if (window.location.href == "/dagsrutine/main/")
 weekDisplay.innerText = "Uke " + new Date().getWeek();
-=======
->>>>>>> Stashed changes

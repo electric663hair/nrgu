@@ -15,6 +15,15 @@ body{
 }
 
 
+.header{
+    width: 70%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border-bottom: #433878 solid 2px;
+}
+
 h1{
     color: #433878;
     font-size: 7vw;
@@ -24,6 +33,7 @@ h1{
     padding: 0;
 }
 
+<<<<<<< Updated upstream
 h2 {
     color: #433878;
     text-shadow: black .08vw .13vw;
@@ -124,6 +134,8 @@ span {
     display: flex;
     justify-content: end;
 }
+=======
+>>>>>>> Stashed changes
 
 .welcome-container {
     display: flex;

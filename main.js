@@ -57,7 +57,7 @@ function makeFooter(creators) {
     
     const footerDiv = document.createElement("div");
     
-    footerDiv.innerHTML = "<div class='footer'><h4>Laget av " + creators + " i 9R på NRGu Sandvika</h4></div>"
+    footerDiv.innerHTML = "<div class='footer'><h4>Laget av " + creators + " i 9R på NRG-u Sandvika</h4></div>"
 
     // footerDiv.classList.add("footer");
     
