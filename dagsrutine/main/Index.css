@@ -7,10 +7,6 @@
     color: red;
 }
 
-.boring-green {
-    color: #6B8E23; /* OliveDrab color for boring green */
-}
-
 .green {
     color: rgb(35, 181, 35);
 }
@@ -19,32 +15,12 @@
     color: purple;
 }
 
-.grey {
-    color: grey;
-}
-
 .brown {
     color: brown;
 }
 
-.dark-purple {
-    color: #4B0082; /* Indigo or a darker shade of purple */
-}
-
-.light-brown {
-    color: #D2B48C; /* Tan */
-}
-
 .orange {
     color: orange;
-}
-
-.teal {
-    color: #085c5c; /* Standard teal hex code */
-}
-
-.pink{
-    color: rgb(237, 117, 211);
 }
 
 li{

@@ -1,26 +1,3 @@
-
-const listItems = document.querySelectorAll("li")
-
-for (let i = 0; i < listItems.length; i++){
-    listItems[i].appendChild( document.createElement("span"))
-}
-
-const checkBoks = document.querySelectorAll("span");
-var count = 0;
-
-for (var i = 0; i < checkBoks.length; i++){
-
-     for (var bever = 0; bever < 7; bever++){
-        count ++;
-        var newCheckBox = document.createElement("input");
-        newCheckBox.type = "checkbox" ;
-        newCheckBox.classList.add("fin-boks");
-        newCheckBox.name = count;
-        checkBoks[i].appendChild(newCheckBox);
-     }
-
-}
-
 function saveCheckboxState() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((checkbox) => {
@@ -75,3 +52,44 @@ Date.prototype.getWeek = function (dowOffset) {
 // Makes the h2 on the top display the current week of the year the clients comuter is in
 const weekDisplay = document.querySelector("#weekDisplay")
 weekDisplay.innerText = "Uke " + new Date().getWeek();
+
+
+function makeActivity() {
+    var activity = document.getElementById("activity").value;
+    var time = document.getElementById("time").value;
+    var color = document.getElementById("colorPicker").value;
+    const hverdagsListe = document.getElementById("hverdagListe");
+
+    var liElement = document.createElement("li");
+    liElement.innerText = `${activity}: ${time}`;
+    liElement.classList.add(color);
+
+    hverdagsListe.appendChild(liElement);
+
+  }
+
+  document.getElementById("createActivityButton").addEventListener("click", function() {
+    makeActivity()
+
+// =====
+
+    const listItems = document.querySelector("li")
+
+    listItems.appendChild(document.createElement("span"))
+    
+    const checkBoks = document.querySelectorAll("span");
+    var count = 0;
+    
+    for (var i = 0; i < checkBoks.length; i++){
+    
+         for (var bever = 0; bever < 7; bever++){
+            count ++;
+            var newCheckBox = document.createElement("input");
+            newCheckBox.type = "checkbox" ;
+            newCheckBox.classList.add("fin-boks");
+            newCheckBox.name = count;
+            checkBoks[i].appendChild(newCheckBox);
+         }
+    
+    }
+})
