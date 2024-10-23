@@ -60,7 +60,7 @@ function closeWindow() {
 
 var drumRoll = new Audio('../resourcres/sound effects/drumroll.mp3');
 
-function countdown(seconds) {
+function countdown(timer) {
     const countdownaaaa = document.getElementById("countdown")
 
     document.getElementById('countdownBtn').style.display = 'none';
@@ -70,26 +70,28 @@ function countdown(seconds) {
 
     drumRoll.play();
 
-    seconds += 1;
+    var defTimer = timer;
+    timer += 1;
 
     const yourmom = setInterval(countdownProcess, 1300);
     function countdownProcess() {
-        seconds -= 1;
-        document.getElementById('countdown').innerHTML = seconds;
+        timer -= 1;
+        document.getElementById('countdown').innerHTML = timer;
         
-        if (seconds == 3) {
+        if (timer == 3) {
             countdownaaaa.style.fontSize = "10rem"
-        }   else if (seconds == 2) {
+        }   else if (timer == 2) {
             countdownaaaa.style.fontSize = "13rem"
-        }   else if (seconds == 1) {
+        }   else if (timer == 1) {
             countdownaaaa.style.fontSize = "18rem"
         }
         
 
-        if (seconds <= 0) {
+        if (timer <= 0) {
             clearInterval(yourmom);
             document.getElementById('countdown').style.display = 'none';
             checkForDay('fredag')
+            timer = defTimer;
         }
     }
 
