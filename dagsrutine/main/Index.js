@@ -65,31 +65,35 @@ function makeActivity() {
     liElement.classList.add(color);
 
     hverdagsListe.appendChild(liElement);
+    liElement.classList.add("needsCheckbox")
+
 
   }
 
-  document.getElementById("createActivityButton").addEventListener("click", function() {
-    makeActivity()
+    document.getElementById("createActivityButton").addEventListener("click", function() {
+        document.getElementById("lagreHverDag-btn").classList.remove("no-content")
+        makeActivity();
+    })
 
-// =====
-
-    const listItems = document.querySelector("li")
-
-    listItems.appendChild(document.createElement("span"))
+    function lagreHverDag() {
+        const listItems = document.querySelectorAll("li.needsCheckbox");
+        document.getElementById("lagreHverDag-btn").classList.add("no-content");
     
-    const checkBoks = document.querySelectorAll("span");
-    var count = 0;
+        listItems.forEach((item, index) => {
+            // Only add checkboxes if the item doesn't already have them
+            if (!item.querySelector("span")) {
+                const checkboxContainer = document.createElement("span");
     
-    for (var i = 0; i < checkBoks.length; i++){
+                for (var i = 0; i < 7; i++) {
+                    var newCheckBox = document.createElement("input");
+                    newCheckBox.type = "checkbox";
+                    newCheckBox.classList.add("fin-boks");
+                    newCheckBox.name = `checkbox-${index}-${i}`;
+                    checkboxContainer.appendChild(newCheckBox);
+                }
     
-         for (var bever = 0; bever < 7; bever++){
-            count ++;
-            var newCheckBox = document.createElement("input");
-            newCheckBox.type = "checkbox" ;
-            newCheckBox.classList.add("fin-boks");
-            newCheckBox.name = count;
-            checkBoks[i].appendChild(newCheckBox);
-         }
-    
+                item.appendChild(checkboxContainer);
+                item.classList.remove("needsCheckbox");
+            }
+        });
     }
-})
