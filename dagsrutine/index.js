@@ -78,4 +78,5 @@ Date.prototype.getWeek = function (dowOffset) {
 
 // Makes the h2 on the top display the current week of the year the clients comuter is in
 const weekDisplay = document.querySelector("#weekDisplay")
+if (window.location.href == "/dagsrutine/main/")
 weekDisplay.innerText = "Uke " + new Date().getWeek();

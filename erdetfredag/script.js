@@ -17,9 +17,9 @@ function checkForDay(inputDay) {
         day = "lørdag"
     }
 
-    var childrenCheering = new Audio('../resourcres/sound effects/kidsCheering.mp3');
-    var sadMusic = new Audio('../resourcres/sound effects/sad.mp3');
-    var blackGuyCryingMEME = new Audio('../resourcres/sound effects/amped-blackGuyCryingMEME.mp3');
+    var childrenCheering = new Audio('../resourcres/soundeffects/kidsCheering.mp3');
+    var sadMusic = new Audio('../resourcres/soundeffects/sad.mp3');
+    var blackGuyCryingMEME = new Audio('../resourcres/soundeffects/amped-blackGuyCryingMEME.mp3');
 
     if (inputDay === day) {
         document.getElementById('ja').style.display = "block";
@@ -58,7 +58,7 @@ function closeWindow() {
   window.close();
 }
 
-var drumRoll = new Audio('../resourcres/sound effects/drumroll.mp3');
+var drumRoll = new Audio('../resourcres/soundeffects/drumroll.mp3');
 
 function countdown(timer) {
     const countdownELement = document.getElementById("countdown")

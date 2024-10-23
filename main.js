@@ -1,11 +1,21 @@
 const dBody = document.body;
 
-// ===== Makes the tab key not able to select elements on the website :)
+var softClick = new Audio("/resourcres/soundeffects/softClick-Amplified.wav");
+
+// ===== Makes the tab key not able to select elements on the website
 document.addEventListener('keydown', function(event) {
     if (event.key == "Tab") {
         event.preventDefault();
     }
 });
+
+// ===== Adding clicksounds to all buttons ===== Does not work because of changing files
+// buttons = document.querySelectorAll("button");
+// for (var i = 0; i < buttons.length; i++) {
+//     buttons[i].addEventListener("click", function() {
+//         softClick.play()
+//     })
+// }
 
 // ===== Checks if the file is run from the root directory or not
 const currentPath = window.location.pathname;
@@ -35,7 +45,9 @@ if (currentPath !== "/") {
         const cards = document.querySelectorAll(".card");
         for (var i = 0; i < cards.length; i++) {
             if (event.key == i+1) {
-                window.location.href = cards[i].getAttribute("onclick").match(/'(.*?)'/)[1];;
+                if (cards[i].getAttribute("onclick")) {
+                    window.location.href = cards[i].getAttribute("onclick").match(/'(.*?)'/)[1];;
+                }
             }   
         }
     })
@@ -57,8 +69,6 @@ function makeFooter(creators) {
 
 }
 makeFooter('Aron og Mark');
-
-
 
 // ===== For Popups DO NOT CHANGE!!! === important!
 function togglePopup(element) {
