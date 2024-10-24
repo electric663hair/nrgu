@@ -24,7 +24,7 @@
         <h3>Hver dag:</h3>
         <fieldset>
             <legend>Opprett en rutine</legend>
-            <form class="hverDagForm" id="activityForm">
+            <form class="hverDagForm" id="hverDagForm">
             <input placeholder="aktivitet..." id="activity" name="activity" type="text" required>
             <input placeholder="Varighet..." id="time" name="time" type="text" required>
             <select name="color" id="colorPicker" required>
@@ -37,7 +37,7 @@
                 <option value="orange">Oransje</option>
             </select>
             </form>
-            <button id="createActivityButton">Opprett</button>
+            <button id="toDoADayBtn">Opprett</button>
         </fieldset>
         <ul id="hverdagListe"></ul>
         <button class="no-content" id="lagreHverDag-btn" onclick="lagreHverDag()">Lagre!</button>
@@ -47,7 +47,7 @@
             <h3>Velg 3 hver dag:</h3>
             <fieldset>
                 <legend>Opprett en rutine</legend>
-                <form class="hverDagForm" id="activityForm">
+                <form class="treOmDagenForm" id="treOmDagenForm">
                 <input placeholder="aktivitet..." id="activity" name="activity" type="text" required>
                 <input placeholder="Varighet..." id="time" name="time" type="text" required>
                 <select name="color" id="colorPicker" required>
@@ -60,10 +60,10 @@
                     <option value="orange">Oransje</option>
                 </select>
                 </form>
-                <button id="createActivityButton">Opprett</button>
+                <button id="threeADayBtn">Opprett</button>
             </fieldset>            
             <ul id="velg"></ul>
-            <button class="no-content" id="lagreHverDag-btn" onclick="lagreHverDag()">Lagre!</button>
+            <button class="no-content" id="lagreTreOmDagen-btn" onclick="lagreHverDag()">Lagre!</button>
         </div>
       
     <script src="../../main.js"></script>

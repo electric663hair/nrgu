@@ -70,13 +70,27 @@ function makeActivity() {
 
   }
 
-    document.getElementById("createActivityButton").addEventListener("click", function() {
-        const form = document.getElementById("activityForm")
+    document.getElementById("toDoADayBtn").addEventListener("click", function() {
+        const form = document.getElementById("hverDagForm");
 
         if (form.checkValidity()) {
 
             document.getElementById("lagreHverDag-btn").classList.remove("no-content")
-            makeActivity();
+            makeActivity(0);
+        } else {
+
+            form.reportValidity();
+        }
+
+    })
+
+    document.getElementById("threeADayBtn").addEventListener("click", function() {
+        const form = document.getElementById("treOmDagenForm");
+
+        if (form.checkValidity()) {
+
+            document.getElementById("lagreTreOmDagen-btn").classList.remove("no-content")
+            makeActivity(1);
         } else {
 
             form.reportValidity();
@@ -108,17 +122,24 @@ function makeActivity() {
     }
 
 
-    function makeActivity() {
-        var activity = document.getElementById("activity").value;
-        var time = document.getElementById("time").value;
-        var color = document.getElementById("colorPicker").value;
-        const hverdagsListe = document.getElementById("hverdagListe");
+    function makeActivity(inputValue) {
+        var activity = document.getElementById("activity"+inputValue).value;
+        var time = document.getElementById("time"+inputValue).value;
+        var color = document.getElementById("colorPicker"+inputValue).value;
+        if (inputValue === 0) {
+            var UnorderedList = document.getElementById("toDoADayBtn");
+        } else if (inputValue === 1) {
+            var UnorderedList = document.getElementById("threeADayBtn");
+        } else {
+            var UnorderedList = null;
+            alert("Error finding a list to place activity in!")
+        }
 
         var liElement = document.createElement("li");
         liElement.innerText = `${activity}: ${time}`;
         liElement.classList.add(color);
 
-        hverdagsListe.appendChild(liElement);
+        UnorderedList.appendChild(liElement);
         liElement.classList.add("needsCheckbox")
 
     }
