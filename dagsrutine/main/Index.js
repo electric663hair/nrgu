@@ -54,129 +54,121 @@ const weekDisplay = document.querySelector("#weekDisplay")
 weekDisplay.innerText = "Uke " + new Date().getWeek();
 
 
-function makeActivity() {
-    var activity = document.getElementById("activity").value;
-    var time = document.getElementById("time").value;
-    var color = document.getElementById("colorPicker").value;
-    const hverdagsListe = document.getElementById("hverdagListe");
+document.getElementById("toDoADayBtn").addEventListener("click", function() {
+    const form = document.getElementById("hverDagForm");
+
+    if (form.checkValidity()) {
+
+        document.getElementById("lagreHverDag-btn").classList.remove("no-content")
+        makeActivity(0);
+    } else {
+
+        form.reportValidity();
+    }
+
+})
+
+document.getElementById("threeADayBtn").addEventListener("click", function() {
+    const form = document.getElementById("treOmDagenForm");
+
+    if (form.checkValidity()) {
+
+        document.getElementById("lagreTreOmDagen-btn").classList.remove("no-content")
+        makeActivity(1);
+    } else {
+
+        form.reportValidity();
+    }
+
+})
+
+function addCheckboxes(inputValue) {
+    let listItems;
+    if (inputValue === 0) {
+        document.getElementById("lagreHverDag-btn").classList.add("no-content");
+        listItems = document.querySelectorAll("ul#hverDagListe > li.needsCheckbox");
+    } else if (inputValue === 1) {
+        document.getElementById("lagreTreOmDagen-btn").classList.add("no-content");
+        listItems = document.querySelectorAll("ul#treOmDagenListe > li.needsCheckbox");
+    } else {
+        alert("Add checkbox-button not found");
+        return;
+    }
+
+    // Loop through each list item and prepend the trashcan icon
+    listItems.forEach((item) => {
+        // Prepend the trashcan image to each list item
+
+        var trashcanSvg = document.createElement("img");
+        trashcanSvg.src = "../../resourcres/trashbin.svg";
+        trashcanSvg.draggable = false;
+        trashcanSvg.alt = "Trashcan symbol (.svg)"
+        trashcanSvg.classList.add("trashcanSvg");
+        trashcanSvg.onclick = "deleteListElement()"
+
+        item.prepend(trashcanSvg);
+
+        // Only add checkboxes if the item doesn't already have them
+        if (!item.querySelector("span")) {
+            const checkboxContainer = document.createElement("span");
+
+            for (var i = 0; i < 7; i++) {
+                var newCheckBox = document.createElement("input");
+                newCheckBox.type = "checkbox";
+                newCheckBox.classList.add("fin-boks");
+                newCheckBox.name = `checkbox-${i}`;
+                checkboxContainer.appendChild(newCheckBox);
+            }
+
+            item.appendChild(checkboxContainer);
+            item.classList.remove("needsCheckbox");
+        }
+    });
+    saveData()
+}
+
+function saveData() {
+    const list = document.querySelector("ul#hverDagListe");
+    // Save the inner HTML as a string
+    localStorage.setItem('listHTML', list.innerHTML);
+}
+
+function loadData() {
+    const savedHTML = localStorage.getItem('listHTML');
+    
+    if (savedHTML) {
+        const list = document.querySelector("ul#hverDagListe");
+        // Restore the saved HTML directly into the list
+        list.innerHTML = savedHTML;
+    } else {
+        console.log("No data found in localStorage.");
+    }
+}
+    
+
+function makeActivity(inputValue) {
+    var activity = document.getElementById("activity"+inputValue).value;
+    var time = document.getElementById("time"+inputValue).value;
+    var color = document.getElementById("colorPicker"+inputValue).value;
+    if (inputValue == 0) {
+        var UnorderedList = document.getElementById("hverDagListe");
+    } else if (inputValue == 1) {
+        var UnorderedList = document.getElementById("treOmDagenListe");
+    } else {
+        var UnorderedList = null;
+        alert("Error finding a list to place activity in!")
+    }
 
     var liElement = document.createElement("li");
-    liElement.innerText = `${activity}: ${time}`;
+    liElement.innerHTML = `<div class="activityDiv">${activity}: ${time}</div>`;
     liElement.classList.add(color);
 
-    hverdagsListe.appendChild(liElement);
     liElement.classList.add("needsCheckbox")
+    UnorderedList.appendChild(liElement);
 
+}
 
-  }
-
-    document.getElementById("toDoADayBtn").addEventListener("click", function() {
-        const form = document.getElementById("hverDagForm");
-
-        if (form.checkValidity()) {
-
-            document.getElementById("lagreHverDag-btn").classList.remove("no-content")
-            makeActivity(0);
-        } else {
-
-            form.reportValidity();
-        }
-
-    })
-
-    document.getElementById("threeADayBtn").addEventListener("click", function() {
-        const form = document.getElementById("treOmDagenForm");
-
-        if (form.checkValidity()) {
-
-            document.getElementById("lagreTreOmDagen-btn").classList.remove("no-content")
-            makeActivity(1);
-        } else {
-
-            form.reportValidity();
-        }
-
-    })
-
-    function lagreHverDag() {
-        const listItems = document.querySelectorAll("li.needsCheckbox");
-        document.getElementById("lagreHverDag-btn").classList.add("no-content");
-    
-        listItems.forEach((item, index) => {
-            // Only add checkboxes if the item doesn't already have them
-            if (!item.querySelector("span")) {
-                const checkboxContainer = document.createElement("span");
-    
-                for (var i = 0; i < 7; i++) {
-                    var newCheckBox = document.createElement("input");
-                    newCheckBox.type = "checkbox";
-                    newCheckBox.classList.add("fin-boks");
-                    newCheckBox.name = `checkbox-${index}-${i}`;
-                    checkboxContainer.appendChild(newCheckBox);
-                }
-    
-                item.appendChild(checkboxContainer);
-                item.classList.remove("needsCheckbox");
-            }
-        });
-    }
-
-
-    function makeActivity(inputValue) {
-        var activity = document.getElementById("activity"+inputValue).value;
-        var time = document.getElementById("time"+inputValue).value;
-        var color = document.getElementById("colorPicker"+inputValue).value;
-        if (inputValue === 0) {
-            var UnorderedList = document.getElementById("toDoADayBtn");
-        } else if (inputValue === 1) {
-            var UnorderedList = document.getElementById("threeADayBtn");
-        } else {
-            var UnorderedList = null;
-            alert("Error finding a list to place activity in!")
-        }
-
-        var liElement = document.createElement("li");
-        liElement.innerText = `${activity}: ${time}`;
-        liElement.classList.add(color);
-
-        UnorderedList.appendChild(liElement);
-        liElement.classList.add("needsCheckbox")
-
-    }
-
-    document.getElementById("createActivityButton").addEventListener("click", function() {
-        const form = document.getElementById("activityForm")
-
-        if (form.checkValidity()) {
-
-            document.getElementById("lagreHverDag-btn").classList.remove("no-content")
-            makeActivity();
-        } else {
-
-            form.reportValidity();
-        }
-
-    })
-
-    function lagreHverDag() {
-        const listItems = document.querySelectorAll("li.needsCheckbox");
-        document.getElementById("lagreHverDag-btn").classList.add("no-content");
-    
-        listItems.forEach((item, index) => {
-            // Only add checkboxes if the item doesn't already have them
-            if (!item.querySelector("span")) {
-                const checkboxContainer = document.createElement("span");
-    
-                for (var i = 0; i < 7; i++) {
-                    var newCheckBox = document.createElement("input");
-                    newCheckBox.type = "checkbox";
-                    newCheckBox.classList.add("fin-boks");
-                    newCheckBox.name = `checkbox-${index}-${i}`;
-                    checkboxContainer.appendChild(newCheckBox);
-                }
-    
-                item.appendChild(checkboxContainer);
-                item.classList.remove("needsCheckbox");
-            }
-        });
-    }
+function deleteListElement() {
+    this.parentElement.remove();
+    saveData()
+}

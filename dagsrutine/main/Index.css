@@ -27,6 +27,7 @@ li{
     font-size: 2.5vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 70%;
 }
 
@@ -91,4 +92,20 @@ fieldset{
 
 legend{
     font-size: 20px;
+}
+
+.trashcanSvg {
+    height: 40px;
+    padding: 5px;
+    color: black;
+    font-size: medium;
+}
+.trashcanSvg:hover {
+    background-color: #eed2ee;
+    border-radius: .7rem;
+}
+
+.actvityDiv {
+    display: flex;
+    justify-content: start;
 }

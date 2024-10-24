@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../dagsrutine/style.css">
     <link rel="stylesheet" href="../../dagsrutine/main/Index.css">
 </head>
-<body>
+<body onload="loadData()">
 
     <button class="exitDagplanlegger" onclick="window.close()">Tilbake</button>
 
@@ -25,9 +25,9 @@
         <fieldset>
             <legend>Opprett en rutine</legend>
             <form class="hverDagForm" id="hverDagForm">
-            <input placeholder="aktivitet..." id="activity" name="activity" type="text" required>
-            <input placeholder="Varighet..." id="time" name="time" type="text" required>
-            <select name="color" id="colorPicker" required>
+            <input placeholder="aktivitet..." id="activity0" name="activity" type="text" required>
+            <input placeholder="Varighet..." id="time0" name="time" type="text" required>
+            <select name="color" id="colorPicker0" required>
                 <option value="">Velg en farge</option> <!-- Empty value forces user to pick a color -->
                 <option value="dark-blue">Mørke Blå</option>
                 <option value="red">Rød</option>
@@ -37,10 +37,10 @@
                 <option value="orange">Oransje</option>
             </select>
             </form>
-            <button id="toDoADayBtn">Opprett</button>
+            <button id="toDoADayBtn">Legg til</button>
         </fieldset>
-        <ul id="hverdagListe"></ul>
-        <button class="no-content" id="lagreHverDag-btn" onclick="lagreHverDag()">Lagre!</button>
+        <ul id="hverDagListe"></ul>
+        <button class="no-content" id="lagreHverDag-btn" onclick="addCheckboxes(0)">Opprett</button>
         </div>
 
         <div class="velg-3">
@@ -48,9 +48,9 @@
             <fieldset>
                 <legend>Opprett en rutine</legend>
                 <form class="treOmDagenForm" id="treOmDagenForm">
-                <input placeholder="aktivitet..." id="activity" name="activity" type="text" required>
-                <input placeholder="Varighet..." id="time" name="time" type="text" required>
-                <select name="color" id="colorPicker" required>
+                <input placeholder="aktivitet..." id="activity1" name="activity" type="text" required>
+                <input placeholder="Varighet..." id="time1" name="time" type="text" required>
+                <select name="color" id="colorPicker1" required>
                     <option value="">Velg en farge</option> <!-- Empty value forces user to pick a color -->
                     <option value="dark-blue">Mørke Blå</option>
                     <option value="red">Rød</option>
@@ -60,10 +60,10 @@
                     <option value="orange">Oransje</option>
                 </select>
                 </form>
-                <button id="threeADayBtn">Opprett</button>
+                <button id="threeADayBtn">Legg til</button>
             </fieldset>            
-            <ul id="velg"></ul>
-            <button class="no-content" id="lagreTreOmDagen-btn" onclick="lagreHverDag()">Lagre!</button>
+            <ul id="treOmDagenListe"></ul>
+            <button class="no-content" id="lagreTreOmDagen-btn" onclick="addCheckboxes(1)">Opprett</button>
         </div>
       
     <script src="../../main.js"></script>
