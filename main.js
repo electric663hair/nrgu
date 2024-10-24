@@ -10,7 +10,7 @@ function showPrompt(subpage) {
 
 function submitPassword() {
     const answer = document.getElementById('password').value;
-    if (answer === "Enigma$") {
+    if (answer === "Enigma$" || answer === "mark123") {
         console.log("Success!")
         console.log(targetSubpage)
         window.location.href = `/${targetSubpage}/`;
